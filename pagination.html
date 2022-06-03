@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Pagination UI Design</title>
+	<style>
+		
+		@import url('https://font.gooleapis.com/css?family=poppins:300,400,500,600,700,800,900&display=swalp');
+		*
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif; 
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			background: #1ce37c;
+		}
+		ul
+		{
+			position: relative;
+			background: #fff;
+			display: flex;
+			padding: 10px 20px;
+			border-radius: 50px;
+			box-shadow: 0 5px 15px rgba(0,0,0,.2); 
+		}
+		ul li
+		{
+			list-style: none;
+			line-height: 50px;
+			margin: 0 5px;
+		}
+		ul li.pageNumber
+		{
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+		ul li a
+		{
+			display: block;
+			text-decoration: none;
+			color: #777;
+			font-weight: 600;
+			border-radius: 50%;
+		}
+		ul li.pageNumber:hover a,
+		ul li.pageNumber.active a
+		{
+			background: #333;
+			color: #fff;
+		}
+		ul li:first-child
+		{
+			margin-right: 30px;
+			font-weight: 700
+			font-size: 20px;
+		}
+		ul li:last-child
+		{
+			margin-left: 30px;
+			font-weight: 700
+			font-size: 20px;
+		}
+	</style>
+	<script src="momentum.min.js"></script>
+</head>
+<body>
+	<ul class="pagination">
+		<li><a href="#" class="prev">< Prev</a></li>
+		<li class="pageNumber active"><a href="#">1</a></li>
+		<li class="pageNumber"><a href="#">2</a></li>
+		<li class="pageNumber"><a href="#">3</a></li>
+		<li class="pageNumber"><a href="#">4</a></li>
+		<li class="pageNumber"><a href="#">5</a></li>
+		<li class="pageNumber"><a href="#">6</a></li>
+		<li><a href="#" class="next">Next ></a></li>
+	</ul>
+	<script src="https://code.jquery.com/jquery-3.4.1.JS"></script>
+	<script type="text/javascript"> 
+		$(document).ready(function(){
+			$('.next').click(function(){
+				$('.pagination').find('.pageNumber.active').next().addClass('active');
+			})
+		})
+	</script>
+</body>
+</html>

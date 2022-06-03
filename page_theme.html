@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Mobile Specific Metas -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta content="telephone=no" name="format-detection">
+    <title>circle white text</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="static/img/favicon.ico" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900%7CShare+Tech+Mono%7CSpace+Mono" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="static/css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+
+@charset "UTF-8";
+
+/***********************************
+/* 1. BODY */
+/***********************************/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+/*html, body {
+  height: 100%;
+  overflow: hidden;
+}*/
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/***********************************
+/* 2. CONTENT */
+/***********************************/
+/* 2.1. Section body */
+.body {
+  /*min-height: 100vh;*/
+  padding: 240px 0;
+  box-sizing: border-box;
+  width: 100%;
+  /*height: 100%;*/
+  text-align: center;
+  margin-top: 20px;
+  overflow: hidden;
+  max-height: 100vh;
+  z-index: 111;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.body__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.body__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.body__message {
+  text-align: center;
+  color: #ffffff;
+}
+
+.message__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 5.6rem;
+  padding-bottom: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.message__text {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 42px;
+  font-size: 18px;
+  padding: 0 60px;
+  max-width: 920px;
+  margin: auto;
+}
+
+.body__nav {
+  max-width: 600px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.e-nav__form {
+  position: relative;
+  height: 45px;
+  overflow: hidden;
+  width: 170px;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #ffffff;
+  padding-left: 10px;
+  padding-right: 46px;
+}
+
+.e-nav__icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #cccccc;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+.e-nav__search {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  font-size: 11px;
+  line-height: 45px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.e-nav__search::-webkit-input-placeholder {
+  color: #cccccc;
+  -webkit-transition: color .25s ease;
+  transition: color .25s ease;
+}
+
+.e-nav__search:hover + .e-nav__icon,
+.e-nav__search:focus + .e-nav__icon, .e-nav__search:focus::-webkit-input-placeholder, .e-nav__search:hover::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.e-nav__link {
+  height: 45px;
+  line-height: 45px;
+  width: 170px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: .1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.e-nav__link:before {
+  content: '';
+  height: 200px;
+  background: #ffffff;
+  position: absolute;
+  top: 70px;
+  right: 70px;
+  width: 260px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+}
+
+.e-nav__link:after {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  z-index: 999;
+  position: relative;
+}
+
+.e-nav__link:hover:before {
+  top: -60px;
+  right: -50px;
+}
+
+.e-nav__link:hover:after {
+  color: #000000;
+}
+
+.e-nav__link:after {
+  content: "Home Page";
+}
+
+.e-nav__link:nth-child(2):hover:after {
+  color: #ffffff;
+}
+/* 2.1. END Section body */
+
+/* 2.2. Social style */
+.body__social {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.e-social__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.e-social__icon {
+  padding-bottom: 30px;
+}
+
+.e-social__icon:last-child {
+  padding-bottom: 0;
+}
+
+.e-social__link {
+  color: #fff;
+  -webkit-transition: all .25s ease;
+  transition: all .25s ease;
+  display: block;
+}
+
+.e-social__link:hover {
+  opacity: .7;
+}
+/* 2.2. END Social style */
+
+/* 2.3. Buble */
+.bradius1,
+.bradius2,
+.bradius3,
+.bradius4,
+.bradius5,
+.bradius6,
+.bradius7,
+.bradius8,
+.bradius9,
+.bradius10,
+.bradius11,
+.bradius12,
+.bradius13,
+.bradius14,
+.bradius15,
+.bradius16,
+.bradius17,
+.bradius18,
+.bradius19,
+.bradius20 {
+    position: absolute;
+    width: 9em;
+    height: 9em;
+    margin: -1em auto auto -1em;
+    transform-origin: 50% 50%;
+    border-radius: 100%;
+    opacity: 0;
+    animation: bradius 3s ease-in-out infinite;
+}
+
+.bradius2 {
+    animation-delay: 0.4s;
+    top: 10%;
+    left: 10%;
+    background-color: #f04657;
+}
+
+.bradius3 {
+    animation-delay: 0.8s;
+    top: 35%;
+    right: 10%;
+    border: 4px solid #f0df46;
+}
+
+.bradius4 {
+    animation-delay: 1.2s;
+    top: 70%;
+    left: 70%;
+    border: 5px solid #f04657;
+}
+
+.bradius5 {
+    animation-delay: 1.6s;
+    top: 40%;
+    left: 50%;
+    background-color: #d5d162;
+}
+
+.bradius6 {
+    animation-delay: 2s;
+    top: 33%;
+    left: 60%;
+    border: 9px solid #f04657;
+}
+
+.bradius7 {
+    animation-delay: 2.4s;
+    top: 50%;
+    left: 20%;
+    border: 4px solid #f04657;
+}
+
+.bradius8 {
+    animation-delay: 2.8s;
+    top: 20%;
+    left: 40%;
+    border: 3px solid #d5d162;
+}
+
+.bradius9 {
+    animation-delay: 3.2s;
+    background-color: #f04657;
+    top: 50%;
+    left: 50%;
+}
+
+.bradius10 {
+    animation-delay: 3.6s;
+    top: 30%;
+    left: 50%;
+}
+
+.bradius11 {
+    animation-delay: 4s;
+    top: 30%;
+    left: 20%;
+}
+
+.bradius12 {
+    animation-delay: 4.4s;
+    top: 20%;
+    left: 10%;
+    border: 3px solid #14c53c;
+}
+
+.bradius13 {
+    animation-delay: 2.4s;
+    bottom: 20%;
+    right: 10%;
+}
+
+.bradius14 {
+    animation-delay: 4.9s;
+    background-color: #439bf3;
+    right: 20%;
+    bottom: 29%;
+}
+
+.bradius15 {
+    animation-delay: 2.9s;
+    background-color: #f04657;
+    left: 2%;
+    bottom: 10%;
+}
+
+.bradius16 {
+    animation-delay: 4.4s;
+    border: 3px solid #439bf3;
+    left: 3%;
+    bottom: 55%;
+}
+
+.bradius17 {
+    animation-delay: 2.4s;
+    border: 6px solid #f04657;
+    left: 39%;
+    bottom: 42%;
+}
+
+.bradius18 {
+    animation-delay: 3.4s;
+    border: 9px solid #f04657;
+    left: 33%;
+    bottom: 2%;
+}
+
+.bradius19 {
+    animation-delay: 1.4s;
+    border: 2px solid #f0df46;
+    right: 5%;
+    top: 2%;
+}
+
+.bradius20 {
+    animation-delay: 3.1s;
+    background-color: #14c53c;
+    right: 8%;
+    top: 5%;
+}
+
+@keyframes bradius {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    33% {
+        opacity: .07;
+    }
+    66% {
+        opacity: .5;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.65);
+    }
+}
+@media (max-width: 950px) {
+
+.body__social {
+    bottom: 30px;
+    top: auto;
+    transform: none;
+    width: 100%;
+    position: fixed;
+    left: 0;
+}
+.e-social__icon {
+    display: inline-block;
+    padding-right: 30px;
+}
+.e-social__icon:last-child {
+    padding-right: 0;
+}
+.e-social__icon {
+    padding-bottom: 0;
+}
+.bradius1,
+.bradius5,
+.bradius2,
+.bradius8,
+.bradius11,
+.bradius12,
+.bradius3{
+    display: none;
+}
+}
+/***********************************
+/* 3. END RESPONSIVE */
+/***********************************/
+</style>
+<!-- END Custom CSS -->
+</head>
+<body>
+ <div class="full-bradiusalls">
+    <span class="bradius2"></span>
+    <span class="bradius3"></span>
+    <span class="bradius4"></span> 
+    <span class="bradius5"></span>
+    <span class="bradius6"></span>
+    <span class="bradius7"></span>
+    <span class="bradius8"></span>
+    <span class="bradius9"></span>
+    <span class="bradius10"></span>
+    <span class="bradius11"></span>
+    <span class="bradius12"></span>
+    <span class="bradius13"></span>
+    <span class="bradius14"></span>
+    <span class="bradius15"></span>
+    <span class="bradius16"></span>
+    <span class="bradius17"></span>
+    <span class="bradius18"></span>
+    <span class="bradius19"></span>
+    <span class="bradius20"></span>
+</div>
+
+
+<section class="body">
+    <!--========================= Content =========================-->
+
+
+
+
+
+
+    <!--========================= end Content =========================-->
+
+
+
+
+
+    <!--========================= Social =========================-->
+    <div class="body__social e-social">
+        <ul class="e-social__list">
+            <li class="e-social__icon">
+                <a href="#" class="e-social__link">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="e-social__icon">
+                <a href="#" class="e-social__link">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li class="e-social__icon">
+                <a href="#" class="e-social__link">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- ================ end Social ==================-->
+</section>
+
+
+
+
+
+<!-- ================ Yandex.Metrika counter ==================--> 
+<script type="text/javascript"> 
+    (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43446069 = new Ya.Metrika({ id:43446069, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); 
+</script>
+</body>
+</html>
