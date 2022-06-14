@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>product image</title>
+	<link rel="stylesheet" type="text/css" href="jquery.exzoom.css">
+	<style type="text/css">
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+		.image #exzoom1
+		{
+			position: relative;;
+			width: 400px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="image">		
+	<div class="exzoom" id="exzoom1">
+		<!-- Images -->
+		<div class="exzoom_img_box">
+			<ul class='exzoom_img_ul'>
+				<li><img src="t-shrt1.jpeg"/></li>
+				<li><img src="t-shrt2.jpeg"/></li>
+				<li><img src="t-shrt3.jpeg"/></li>
+				<li><img src="t-shrt.jpeg"/></li>
+				<li><img src="t-shrt3.jpeg"/></li>
+			</ul>
+		</div>
+		<div class="exzoom_nav"></div>
+	</div>
+
+	<div class="detail">
+		<div class="p_delivery">
+				<div class="delivery">
+					<h4><span><i class="fa fa-truck" aria-hidden="true"></i></span> Delivery Options</h4>
+					<form autocomplete="off">
+						<input type="text" class="pincode_code" maxlength="6" placeholder="Enter Pincode" name="Pincode" value>
+						<input type="submit" class="pincode_button" name="Pincode" value="Check">
+					</form>
+					<p class="pincode_tag mt-2">Please enter PIN code to check delivery time & Pay on Delivery Availability</p>
+				</div>
+				<div class="delivery2">				
+					<ul class="list_tag">
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>100% Original Products</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Free Delivery on order above Rs. 799</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Pay on delivery might be available</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Easy 30 days returns and exchanges</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Try & Buy might be available</li></div>
+					</ul>
+				</div>
+			</div>
+	</div>
+
+	</div>
+	<script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="jquery.exzoom.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#exzoom1").exzoom({
+				"autoPlay":false,
+
+			});			
+		});
+	</script>
+</body>
+</html>
+
+
+
+

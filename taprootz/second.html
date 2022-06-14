@@ -1,0 +1,168 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<link rel="stylesheet" type="text/css" href="https://www.taprootz.in/home/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="https://www.taprootz.in/home/font-awesome-4.7.0/css/font-awesome.min.css" />
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet" href="https://www.taprootz.in/home/css/header.css">
+ 	<link rel="stylesheet" href="owl.carousel.min.css">
+ 	<link rel="stylesheet" href="owl.theme.default.min.css">
+ 	<link rel="stylesheet" type="text/css" href="style3.css">
+ 	<style type="text/css">
+
+
+ 	</style>
+ </head>
+ <body>
+
+ 	<div class="second_body">
+ 		<div class="container d-flex">			
+
+ 			<!-- side bar -->
+ 			<div class="sidebar_tap">
+ 				<span>RecRootz</span>
+ 				<span>Holistic Assessment Test(HAT)</span>
+ 				<span class="active">Skill Assessment Engine</span>
+ 				<span>Report</span>
+ 				<span>Job</span>
+ 				<span>Workforce Mapping</span>		
+ 			</div>
+ 			<!-- side bar end -->
+
+ 			<!--  second_body -->
+ 			<div class="second_tab">
+ 				<div class="second_headline">
+ 					<h3 class="main">Add your workforce to the system</h3>
+ 					<h3 class="main_shadow">Add your workforce to the system</h3>
+ 				</div>
+ 				<div class="second_para">
+ 					<p>
+ 						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+ 					</p>
+ 				</div>
+ 				<!-- button -->
+ 				<div class="btm4_box">
+ 					<button class="btn">Current workforce</button>
+ 					<button class="btn active">Add workforce</button>
+ 					<button class="btn">Download in Excel</button>
+ 					<button class="btn"><b>+</b> Upload List</button>
+ 				</div>
+ 				<!-- button end-->
+
+
+ 				<div>
+ 					
+ 					<div class="mt-3">
+ 						<div class="Filter mb-1 text-right">
+ 							<span>Filter</span>
+ 							<i class="fa fa-filter" aria-hidden="true"></i>
+ 						</div>
+ 						<table class="table table-striped">
+ 							<thead>
+ 								<tr>
+ 									 									<th>Name</th>
+ 									<th scope="col">Email</th>
+ 									<th scope="col">Phone No.</th>
+ 									<th scope="col">Location</th>
+ 								</tr>
+ 							</thead>
+ 							<tbody>
+ 								<tr>
+ 									<td>User001</td>
+ 									<td>user001@gmail.com</td>
+ 									<td>+91 1258672020</td>
+ 									<td>Delhi</td>
+ 								</tr>
+ 								<tr>
+ 									<td>User001</td>
+ 									<td>user001@gmail.com</td>
+ 									<td>+91 1258672020</td>
+ 									<td>Delhi</td>
+ 								</tr>
+ 								<tr>
+ 									<td>User001</td>
+ 									<td>user001@gmail.com</td>
+ 									<td>+91 1258672020</td>
+ 									<td>Delhi</td>
+ 								</tr>
+ 								<tr>
+ 									<td>User001</td>
+ 									<td>user001@gmail.com</td>
+ 									<td>+91 1258672020</td>
+ 									<td>Delhi</td>
+ 								</tr>
+ 							</tbody>
+ 						</table>
+ 					</div>
+ 				</div>
+
+
+ 				<!-- button -->
+ 				<div class="btm4_box">
+ 					<button class="btn active"onclick="openForm()"><b>+</b> Add co-worker</button>
+ 					<button class="btn">Confirm</button>
+ 				</div>
+ 				<!-- button end-->
+
+
+
+
+ 			</div>
+
+ 		</div>
+ 	</div>
+ 	
+
+
+
+
+
+
+ 	<div id="id01" class="popup_form bg-white" style="display: none;">
+ 		<div>
+ 			<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal font-weight-bold">&times;</span>
+ 			<h4 class="font-weight-bold">Add Co-worker</h4>
+ 			<form action="/action_page.php">
+ 			
+ 				<div class="form-group">
+ 					<label class="font-weight-light">Name:</label>
+ 					<input type="text" class="form-control" placeholder="Name" id="pwd">
+ 				</div>
+ 					<div class="form-group">
+ 					<label class="font-weight-light">Email ID:</label>
+ 					<input type="email" class="form-control" placeholder="Email ID" id="email">
+ 				</div>
+ 				<div class="form-group">
+ 					<label class="font-weight-light">Phone Number:</label>
+ 					<input type="text" class="form-control" placeholder="Phone Number" id="pwd">
+ 				</div>
+ 				<div class="form-group">
+ 					<label class="font-weight-light">Location:</label>
+ 					<input type="text" class="form-control" placeholder="Location" id="pwd">
+ 				</div>
+ 				
+ 				<button type="submit" class="popbtn text-white mt-4">Add</button>
+ 			</form>
+ 		</div>
+
+
+ 	
+ 
+ </div>
+
+<script>
+function openForm() {
+  document.getElementById("id01").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("id01").style.display = "none";
+}
+</script>
+
+</body>
+</html>

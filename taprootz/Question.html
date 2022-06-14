@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Question</title>
+	<link rel="stylesheet" type="text/css" href="https://www.taprootz.in/home/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://www.taprootz.in/home/font-awesome-4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.taprootz.in/home/css/header.css">
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		.question-body h2
+		{
+			color: #555;
+		}
+		.question-info
+		{
+			width: 500px;
+			margin: 0px auto;
+		}
+		.question-box
+		{
+			border: 1px solid #aaa;
+			width: 500px;
+			margin: 0px auto;
+			background-color: #fff;
+		}
+		.question-red
+		{
+			border: 1px solid #aaa;
+			width: 500px;
+			margin: 0px auto;
+			padding: 5px;
+			color: #fff;
+			font-size: 20px;
+			background-color: #18bebc;
+		}
+		.question-box h5
+		{
+			font-weight: 600;
+		}
+		.question-btn
+		{
+			width: 100%;
+			justify-content: space-between;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.question-btn-prev, .question-btn-next
+		{ 
+			width: 100px;
+			border: none;
+			background-color: #18bebc;
+			padding: 5px 10px;
+			color: #fff;
+		}
+		.question-info
+		{
+			font-size: 20px;
+			color: #18bebc;
+		}
+		.timer{
+	display: -webkit-inline-box;
+}
+.jst-timeout{
+color:red
+}
+	</style>
+</head>
+<body style="background-image: linear-gradient(to right, #E9F7F7, #9FE3E3);">
+		<div class="question-body">
+			<h2 class="text-center font-weight-bold">All the best Vinay</h2>
+			<div class="question-info d-flex justify-content-between">
+				<p><b>Subject:</b> Maths</p>
+			<!-- <p id="timer_div"></p> -->
+	<!-- <p class="timer timer0 alert" data-minutes-left="1.02"></p> -->
+
+			</div>
+			<div class="question-red text-center">
+				<span>1</span>
+				<span>of</span>
+				<span>20</span>
+			</div>
+			<div class="question-box p-5">
+				<h5>Q1. What is you name?</h5>
+
+				<div class="question-here pl-5">
+					<input type="radio" name="radio">
+					<label>Vinay</label><br>
+					<input type="radio" name="radio">
+					<label>Bikash</label><br>
+					<input type="radio" name="radio">
+					<label>Anvesh</label><br>
+					<input type="radio" name="radio">
+					<label>Rahul</label>
+				</div>
+				<div class="question-btn mt-4">
+					<button class="question-btn-prev">Prev</button>
+					<button class="question-btn-next">Next</button>
+				</div>
+			</div>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="jquery-countdown-timer-control.js"></script>
+<script>
+    $(function(){
+		var timer0=$('.timer0').startTimer({}).trigger('start');
+	})
+</script>
+
+
+<!-- 		<script type="text/javascript">
+				const startingMinutes = 60;
+				let time = startingMinutes * 60;
+
+				const countdownEl = document.getElementById('timer_div');
+
+				setInterval(updateCountdown, 1000);
+
+				function updateCountdown(){
+					const minutes = Math.floor(time / 60);
+					let second = time % 60;
+
+
+					countdownEl.innerHTML = `${minutes}:${second}`;
+					time--;
+				}
+
+		</script> -->
+
+	</body>
+	</html>

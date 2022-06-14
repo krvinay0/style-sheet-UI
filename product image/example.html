@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.image-wrap
+		{
+			max-width: 1440px;
+			max-height: 540px;
+			margin: 50px auto;
+			overflow: hidden;
+			position: relative;
+	max-height: 500px;
+	z-index: 1;
+	max-width: 500px;
+	overflow: hidden;
+		}
+		.image
+		{
+
+	max-width: 500px;
+	max-height: 600px;
+	object-fit: cover;
+	cursor: pointer;
+	position: relative;
+	border: 2px solid black;
+				padding-top: calc(100% / (16/9));
+			background-image: url(t-shrt1.jpeg);
+			background-size: 100%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.image:hover
+		{
+			background-size: 175%;
+		}
+		/* #img
+		{
+			width: 100%;
+			position: center;
+
+		}
+		#img:hover
+		{
+			width: 175%;
+		} */
+	</style>
+
+</head>
+<body>
+
+		<div class="image-wrap">
+			<div class="image"></div>
+		</div>
+
+
+		<script>
+			const image = document.querySelector('.image');
+			image.addEventListener('mousemove',function (e){
+				let width = image.offsetWidth;
+				let height = image.offsetHeight;
+				let mouseX = e.offsetX;
+				let mouseY = e.offsetY;
+
+				let bgPosX = (mouseX / width * 100);
+				let bgPosY = (mouseY / height * 100);
+
+				image.style.backgroundPosition = `${bgPosX}% ${bgPosY}%`;
+
+
+				
+				// console.log(mouseY+ ":" + mouseX);
+				// console.log(bgPosX + "%");
+				// console.log(bgPosY + "%");
+			});
+
+			// image.addEventListener('mouseleave', function(){
+			// 	image.style.backgroundPosition = 'center'
+			// })
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container at-5 nb-5">
+		<div class="row">
+			<div class="col-md-6">
+				<img src="t-shrt1.jpeg"/>
+			</div>
+			<div class="col-md-6"></div>
+		</div>
+	</div> -->
+	<!-- <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript">
+		$('#myimage').imagezoomsl({
+			zoomrange:[1, 12].
+			zoomstart: 4;
+			innerzoom: true;
+			magnifierborder: 'none'
+		})
+	</script> -->
+</body>
+</html>

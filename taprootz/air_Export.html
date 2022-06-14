@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<link rel="stylesheet" type="text/css" href="https://www.taprootz.in/home/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="https://www.taprootz.in/home/font-awesome-4.7.0/css/font-awesome.min.css" />
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet" href="https://www.taprootz.in/home/css/header.css">
+ 	<link rel="stylesheet" href="owl.carousel.min.css">
+ 	<link rel="stylesheet" href="owl.theme.default.min.css">
+ 	<style type="text/css">
+ 		.result_body
+ 		{
+ 			background-color: #18bebc;
+ 			margin: 0;
+ 			padding-top: 30px;
+ 			width: 100%;
+ 		}
+ 		.result_body h5
+ 		{
+ 			font-size: 20px; 
+ 			font-weight: 600;
+ 		}
+ 		.result_box
+ 		{
+ 			background-color: #eee;
+ 			width: 60%;
+ 			margin: 0 auto;
+ 		}
+ 		.bottom_border
+ 		{
+ 			border-bottom: 2px solid #18bebc;
+ 			padding: 5px 20px;
+ 			font-size: 13px; 
+ 			line-height: 13px;
+ 		}
+ 		.Something
+ 		{
+ 			padding-left: 20px;
+ 			font-size: 10px;
+ 			line-height: 25px;
+ 			display: flex;
+ 			align-items: center;
+ 			border-bottom: 2px solid #18bebc;
+ 		}
+ 		.questoion
+ 		{
+ 			padding: 5px 20px;
+ 			border-bottom: 2px solid #18bebc;
+ 			font-size: 15px;
+ 			font-weight: 500px;
+ 			margin-bottom: 0;
+ 		}
+ 		.qno_tab
+ 		{
+ 			font-family: 'Roboto Condensed', sans-serif;
+ 			color: #18bebc;
+ 			font-weight: 500;
+ 			padding: 8px 20px 0 20px;
+ 		}
+ 		.result_box .btm
+ 		{
+ 			border: 2px solid #18bebc;
+ 			background: #eee;
+ 			padding:2px 10px !important;
+ 			font-size: 10px;
+ 			width: 60px;
+ 			margin:  5px 10px;
+ 		}
+ 		.result_box .btm-next, .result_box .btm:hover
+ 		{
+ 			background: #18bebc !important;
+ 			border: 2px solid #18bebc;
+ 			padding:2px 10px !important;
+ 			font-size: 10px;
+ 			width: 60px;
+ 			margin:  5px 10px;
+ 		}
+ 		.timer
+ 		{
+ 			display: -webkit-inline-box;
+ 		}
+ 		@media only screen and (max-width: 780px) {
+		.result_box
+		{
+			width: 90%;
+			margin: 0 auto;
+		}
+ 	</style>
+ </head>
+ <body>
+
+
+ 	<div class="result_body pb-5 text-center">
+ 		<div class="result_box mt-5">
+ 			<div class="bg-dark bottom_border text-white text-center p-2">Air Export</div>
+ 			<P class=" questoion text-left ">Process is initiated by checking details of</P>
+ 			<div class="text-left">
+ 				<div class="bottom_border">
+ 					<input type="radio" name="option"> Cargo
+ 				</div>
+ 				<div class="bottom_border">
+ 					<input type="radio" name="option"> Availabilty
+ 				</div>
+ 				<div class="bottom_border">
+ 					<input type="radio" name="option"> Buy rates  
+ 				</div>
+ 				<div class="bottom_border">
+ 					<input type="radio" name="option"> All of the above
+ 				</div>
+ 				<p class="Something">Something wrong with the question? <a href="#"> Give Feedback</a></p>
+ 			</div>
+ 		</div>
+
+ 		<div class="result_box mt-1 d-flex justify-content-between">
+ 			<div class="qno_tab d-flex">
+ 				<p class="pl-3">Question 1/65</p> 
+ 				<p class='timer pl-5' data-minutes-left=1></p>
+
+ 				<!-- <span class="pl-3">14:15</span> -->
+ 			</div>
+ 			<div class=" p-2">
+ 				<button class="btm p-2">Previous</button>
+ 				<button class="btm-next p-2">Next</button>
+ 			</div>
+ 		</div>
+ 	</div>
+ </body>
+ </html>
+
+
+
+
+ 			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+ 			<script src="jquery.simple.timer.js"></script>
+ 			<script type="text/javascript">
+ 				$('.timer').startTimer();
+ 			</script>
+ 		</body>
+ 		</html>

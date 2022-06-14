@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>list_table_demo</title>
+	<link rel="stylesheet" type="text/css" href="https://www.taprootz.in/home/bootstrap-4.0.0/dist/css/bootstrap.min.css" />	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://www.taprootz.in/home/css/header.css">
+	<link rel="stylesheet" href="owl.carousel.min.css">
+	<link rel="stylesheet" href="owl.theme.default.min.css">	
+	<style type="text/css">
+		.progres
+		{
+			background-color: #39d2cf;
+			width: 100%;
+			margin: 30px 0;
+			padding: 20px;
+			border-radius: 5px;
+		}
+		.progres_tittle
+		{
+			width: 30%;
+			font-size: 13px;
+			padding-top: 8px;
+		}
+		.progres_bar
+		{
+			width: 65%;
+		}
+		.pro_per
+		{
+			width:  30px;
+			font-size: 12px;
+		}
+		.progres_row
+		{
+			display: flex;
+			line-height: 5px;
+		}
+		.progress
+		{
+			background-color: #33cccc;
+			border-radius: 0;
+			height: 20px;
+			margin:  3px 0 0 0;
+		}
+		.progress-bar 
+		{
+			background-color: #fff;
+		}
+
+		.result_body
+		{
+			background-color: #18bebc;
+			margin: 0;
+			padding-top: 30px;
+			width: 100%;
+		}
+		.orgin_body
+		{
+			display: flex;
+			margin: 0 4%;
+			width: 90%;
+		}
+		.sidebar_tap
+		{
+			margin: 30px 40px 0 0;
+		}
+		.sidebar_tap span
+		{
+			width: 200px;
+			background-color: #eee;
+			list-style: none;
+			display: flex;
+			padding: 8px;
+			margin: 1px 0;
+			font-size: 13px;
+			font-weight: 500;
+		}
+		.sidebar_tap .active,  .sidebar_tap span:hover
+		{
+			background-color: #18bebc;
+			border-left: 2px solid #eee;
+			border-right: 2px solid #eee;
+		}
+		.skills-body
+		{
+			width: 100%;
+		}
+		.skillstabs.rgani
+		{
+			font-size: 30px
+			font-weight: 800;
+		}
+		.skills-tab
+		{
+			display: flex;
+			justify-content: space-between;
+		}
+		.skills-box
+		{
+			width: 170px;
+			height: 170px;
+			background: #39d2cf;
+			text-align: center;
+			margin: 0 8px;
+			padding: 0 5px;
+			border-radius: 5px;
+		}
+		.skills-box h3
+		{
+			margin-top: 26px;
+			font-size: 50px;
+			font-weight: 800;
+		}
+		.skills-box .active, .skills-box:hover
+		{
+			color: #eee;
+		}
+		.skills-box p
+		{
+			font-size: 20px;
+			line-height: 25px;
+			margin-top: -6px;
+		}
+		.table-striped>tbody>tr:nth-of-type(odd) {
+			background-color: #39d2cf !important;
+		}
+		.table-striped>tbody>tr:nth-of-type(even) {
+			background-color: #18bebc !important;
+		}
+		.table td, .table th
+		{
+			border: none !important;
+		}
+		.skillstabs
+		{
+			display: flex;
+		}
+		.orgin_body
+		{
+			display: flex;
+		}
+		.btns_bar
+		{
+			min-width: 200px;
+			background-color: #eee;
+			padding: 8px;
+			font-size: 13px;
+			font-weight: 500;
+		}
+		.btn-genrate button
+		{
+			min-width: 200px;
+			background-color: #eee;
+			padding: 8px;
+			margin: 130px 0 0 20px;
+			font-size: 13px;
+			font-weight: 500;
+		}
+		.btn
+		{
+			border-radius: 0;
+		}
+		.triangle
+		{
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background-color: #39d2cf;
+			transform: rotate(45deg);
+			margin: 10px 35px;
+
+		}
+		.Filter
+		{
+			font-size: 10px;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.tables
+		{
+			width: 100%;
+		}
+		.tables>tbody>tr>td
+		{
+			line-height: 13px;
+			font-size: 13px;
+			padding: 7px 10px;
+		}
+		.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td
+		{
+			line-height: 13px;
+			font-size: 13px;
+			padding: 3px 0 0 0;
+		}
+		.table>thead>tr>th 
+		{
+			line-height: 12px;
+			font-size: 12px;
+			padding: 5px 0;
+		}
+		input[type=checkbox]
+		{
+			line-height: 8px;
+			margin: 0;;
+			padding: 0;
+		}
+		
+		@media only screen and (max-width: 1290px) {
+			.skills-box
+			{
+				width: 110px;
+				height: 110px;
+			}
+			.skills-box h3
+			{
+				margin-top: 16px;
+				font-size: 30px;
+				font-weight: 800;
+			}
+			.skills-box p
+			{
+				font-size: 15px;
+				line-height: 15px;
+				margin-top: 6px;
+			}
+		}
+		@media only screen and (max-width: 1056px) {
+			.skills-box
+			{
+				width: 70px;
+				height: 70px;
+			}
+			.skills-box h3
+			{
+				margin-top: 6px;
+				font-weight: 700;
+			}
+			.skills-box p
+			{
+				font-size: 10px;
+				line-height: 10px;
+				margin-top: -6px;
+			}
+			.tables>tbody>tr>td
+			{
+				line-height: 11px;
+				font-size: 11px;
+				padding: 7px 10px;
+			}
+			.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td
+			{
+				line-height: 10px;
+				font-size: 10px;
+				padding: 3px 0 0 0;
+			}
+			.table>thead>tr>th 
+			{
+				line-height: 12px;
+				font-size: 12px;
+				padding: 5px 0;
+			}
+			.progres_tittle
+			{
+				font-size: 10px;
+			}
+			.btns_bar
+			{
+				min-width: 160px;
+				padding: 5px;
+				font-size: 10px;
+				font-weight: 500;
+			}
+			.btn-genrate button
+			{
+				min-width: 160px;
+				padding: 5px;
+				margin: 130px 0 0 20px;
+				font-size: 10px;
+				font-weight: 500;
+			}
+			.sidebar_tap span
+			{
+				width: 160px;
+				list-style: none;
+				display: flex;
+				padding: 5px;
+				margin: 1px 0;
+				font-size: 10px;
+				font-weight: 500;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="result_body">
+		<div class="orgin_body">
+
+			<!-- side bar -->
+			<div class="sidebar_tap">
+				<span>RecRootz</span>
+				<span>Holistic Assessment Test(HAT)</span>
+				<span class="active">Skill Assessment Engine</span>
+				<span>Report</span>
+				<span>Job</span>
+				<span>Add Workforce</span>		
+			</div>
+			<!-- side bar end -->
+
+			<div class="skills-body" >
+				<div class="skillstabs d-flex">
+					<div class="" style="width: 100%">
+						<div>
+							<h3 class="rgani">Organisational Skill Report</h3>
+
+							<!-- skills test box -->
+							<div class="skills-tab">
+								<div class="skills-box">
+									<div class="">
+										<h3>34</h3>
+										<p>No. of skill test created</p>
+									</div>
+								</div>
+								<div class="skills-box">
+									<div class="">
+										<h3>34</h3>
+										<p>No. of skill test created</p>
+									</div>
+								</div>
+
+								<div class="skills-box">
+									<div class="">
+										<h3>34</h3>
+										<p>No. of skill test created</p>
+									</div>
+								</div>
+
+								<div class="skills-box">
+									<div class="active">
+										<h3>34</h3>
+										<p>No. of skill test created</p>
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+						<!-- skills test box end -->
+
+
+						<!-- filter -->
+						<div class="Filter text-right mt-5 mb-1">
+							<div class="triangle"></div>
+							<span class="#">Filter</span>
+							<i class="fa fa-filter" aria-hidden="true"></i>
+						</div>
+						<!-- filter  end-->
+
+
+						<!-- skills table -->
+						<div>
+							<div class="table-responsive-xl" style="border-radius: 5px;
+							">
+							<table class="tables table-striped mb-0" >
+								<tr class="">
+									<th class="p-3">Skill test name</th>
+									<th class="p-3">Date (Active)</th>
+									<th class="p-3">Fuction</th>
+									<th class="p-3">Employee</th>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+								<tr>
+									<td scope="row">Air Export</td>
+									<td>11-Dec-2020</td>
+									<td>Sales</td>
+									<td>34</td>
+								</tr>
+							</table >
+						</div>
+					</div>
+					<!-- skills table end -->
+
+					<!-- progress bar -->
+					<div class="progres">
+						<div>
+							<div class="progres_row">
+								<div class="progres_tittle">
+									<p>No. of test created</p>
+								</div>
+								<div class="progres_bar">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="70"
+										aria-valuemin="0" aria-valuemax="100" style="width:100%"></div>
+									</div>
+								</div>
+								<p class="pro_per p-2 m-0">34</p>
+							</div>
+						</div>
+						<div>
+							<div class="progres_row">
+								<div class="progres_tittle">
+									<p>No. of test taken</p>
+								</div>
+								<div class="progres_bar">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="70"
+										aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+									</div>
+								</div>
+								<p class="pro_per p-2 m-0">26</p>
+							</div>
+						</div>
+						<div>
+							<div class="progres_row">
+								<div class="progres_tittle">
+									<p class=" text-white">No. of test Pending</p>
+								</div>
+								<div class="progres_bar">
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" aria-valuenow="70"
+										aria-valuemin="0" aria-valuemax="100" style="width:20%"></div>
+									</div>
+								</div>
+								<p class="pro_per p-2 text-white m-0">08</p>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- progress bar end -->
+				</div>
+				<div class="btn-genrate ml-5" >
+					<button class="btn  text-center"> Genrate Reports</button>
+				</div>
+			</div>
+
+
+			<!-- list of condidate -->
+			<div>			
+				<div mt-5>
+					<h3 class="mb-0">List of Condidate Assessed</h3>
+
+					<div class="m-0">
+						<div class="Filter mb-1 text-right">
+							<span>Filter</span>
+							<i class="fa fa-filter" aria-hidden="true"></i>
+						</div>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th scope="col"><input type="checkbox" name="list"></th>
+									<th>Name</th>
+									<th scope="col">Date of Sharing</th>
+									<th scope="col">Date of completion</th>
+									<th scope="col">Skill Test Name</th>
+									<td>Score</td>
+									<td>Location</td>
+									<td>Status</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+								<tr>
+									<td scope="row"><input type="checkbox" name="list"></td>
+									<td>User001</td>
+									<td>11-Dec-2020</td>
+									<td>12-Dec-2020</td>
+									<td>Air Export</td>
+									<td>20/100</td>
+									<td>Delhi</td>
+									<td>pending</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- list of condidate end -->
+
+
+				<!-- Compare buttom -->
+				<div class="pb-5">
+					<button class="btns_bar btn mr-5">Compare Employees</button>
+					<button class="btns_bar btn mr-5">+ Download Report</button>
+				</div>
+				<!-- Compare buttom end -->
+			</div>
+
+		</div>
+	</div>
+
+
+</body>
+</html>

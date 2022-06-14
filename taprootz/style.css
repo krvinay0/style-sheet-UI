@@ -1,0 +1,172 @@
+.owl-carousel .owl-nav button.owl-prev 
+		{
+			background: transparent;
+			color: #fff;
+			border: none;
+			padding: 0!important;
+			font-size: 50px;
+			position: absolute;
+			top: 50%;
+			left: 25px;
+			transform: translateY(-50%);
+		}
+		.owl-carousel .owl-nav button.owl-next 
+		{
+			background: transparent;
+			color: #fff;
+			border: none;
+			padding: 0!important;
+			font-size: 50px;
+			position: absolute;
+			top: 50%;
+			right: 25px;
+			transform: translateY(-50%);
+		}
+		.owl-theme .owl-dots
+		{
+			margin-top: -40px;
+			position: relative;
+			outline: none;
+			border: none;
+		}
+		.owl-carousel button.owl-dot
+		{
+			outline: none;
+		}
+		.owl-carousel .item .slider
+		{
+			width: 100%;
+			height: 300px;
+			background-image: linear-gradient(to right, #18bebc, #9be3e0);
+			padding: 10px 5%;
+		}
+		.owl-carousel .slider-text
+		{
+			width: 65%;
+		}
+		.owl-carousel .slider-img
+		{
+			width: 30%;
+		}
+		.contain-body .form-inline
+		{
+			border-radius: 50px;
+			border:2px solid #18bebc;
+			height: 40px;
+			padding:  0 10px;
+
+		}
+		.contain-body .form-input, .contain-body button
+		{
+			border: none;
+			outline: none;
+			background-color: transparent;
+		}
+		.contain-body .fillter
+		{
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			background-color: #18bebc;
+			color: #fff;
+			font-size: 25px;
+			border-radius: 50%;
+			padding: 3px;
+			text-align: center;
+		}
+		.contain-box
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.contain-box .box-cont
+		{
+			width: 300px;
+			height: 300px;
+			border:2px solid #18bebc;
+			padding: 10px;
+			margin: 10px;
+			overflow: hidden;
+			background-color: #18bebc;
+			text-align: left;
+		}
+		.contain-box .box-cont:hover
+		{
+			background-color: #fff;
+		}
+		.contain-box .box-cont i
+		{
+			font-size: 15rem;
+			text-align: left;
+		}
+		hr
+		{
+			border:2px solid #ddd;
+			width: 60px;
+			margin: 0;
+		}
+		.contain-box .box-cont h4
+		{
+			font-weight: 600;
+		}
+		.contain-box .box-cont p
+		{
+			font-size: 14px;
+			margin-top: 5px;
+		}
+		.banner-buttom
+		{
+			background-color: #18bebc;
+			height: 200px;
+			margin-bottom: 50px;
+		}
+		.banner-box
+		{
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+			padding: 30px 10px;
+		}
+		.banner-box .num
+		{
+			font-weight: 600;
+			margin: 0;
+			font-size: 30px;
+		}
+		.banner-box .num span
+		{
+			font-weight: 600;
+			margin: 0;
+			font-size: 25px;
+		}
+		.banner-box .head
+		{
+			font-weight: 600;
+			margin: 0;
+			font-size: 18px;	
+		}
+		.banner-box .para
+		{
+			padding: 0 30px;
+			font-size: 13px;
+		}
+		.banner-flex
+		{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+		.tables-con td span
+		{
+			font-size: 30px;
+			font-weight: 600;
+		}
+		.table-striped tbody tr:nth-of-type(odd) 
+		{
+			background-color: #18bebc;
+		}
+		.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th
+		{
+			line-height: 40px;
+		}

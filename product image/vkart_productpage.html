@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>product image</title>
+	<link rel="stylesheet" type="text/css" href="jquery.exzoom.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+		.product_page
+		{
+			width: 90%;
+			height: 760px;
+			margin: 0 5%;
+			display: flex;
+		}
+		#exzoom1
+		{
+			position: relative;
+			width: 550px;
+			margin: 20px;
+			align-items: center;
+		}
+		.exzoom .exzoom_btn a.exzoom_next_btn
+		{
+			background-color: #000;
+			color: #fff;
+			border-radius: 50%;
+			height: 35px; 
+			width:  35px;
+			line-height: 35px;
+			margin-top: 12px;
+		}
+		.exzoom .exzoom_btn a.exzoom_prev_btn
+		{
+			background-color: #000;
+			color: #fff;
+			border-radius: 50%;
+			height: 35px; 
+			width:  35px;
+			line-height: 35px;
+			margin-top: 12px;
+		}
+		.exzoom .exzoom_img_box
+		{
+			background-color: transparent;
+		}
+		.exzoom .exzoom_nav {
+			width: 100%;
+			display: block;
+			margin-left: 84px;
+		}
+		.exzoom .exzoom_btn{
+			width: 400px;
+			align-items: center; justify-content: center;
+			margin-left: 70px;
+		}
+		.exzoom .exzoom_nav
+		{
+			width: 348px ! important;
+			justify-content: center ! important;
+		}
+		.btns-boxs
+		{
+			margin-top: 10px;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.btns-boxs button
+		{
+			flex-basis: 48%;
+			padding: 15px 0;
+			margin: 5px 0 30px 0;
+		}
+		.product_detail
+		{
+			margin: 20px;
+			min-width: 400px;
+			overflow: scroll;
+			height: 760px;
+		}
+		.product_detail::-webkit-scrollbar
+		{
+			display: none;
+		}
+		.newarrival
+		{
+			background-color: green;
+			width : 50px;
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			margin-bottom: -5px;
+		}		
+		.product_detail .product_tittle
+		{
+			color: #555;
+		}
+		.product_detail .product_id, .pincode_tag
+		{
+			font-size:  12px;
+			line-height: 12px;
+		}
+		.product_detail .price
+		{
+			display: flex;
+		}
+		.product_detail .price h2
+		{
+			font-size:  26px;
+			font-weight: bold;
+			color: #555;
+			padding-top: 20px;
+		}
+		.product_detail .main_price
+		{
+			color: #999;
+			margin: 23px 10px;
+		}
+		.product_detail .discont
+		{
+			color: green;
+			margin-top: 23px;
+			font-weight: 700;
+		}
+		.product_detail .taxes{
+			color: red;
+			margin-top: -20px;
+		}
+		.exzoom .exzoom_img_ul_outer, .exzoom .exzoom_nav .exzoom_nav_inner span
+		{
+			border: none;
+		}
+		.product_detail .product_rating
+		{
+			color: orange;
+			font-size: 18px;
+			line-height: 18px;
+			margin: -10px 0;
+		}
+		.product_detail p {
+			line-height: 20px;
+		}
+		.product_detail .offers_tc ul, .product_detail .list_tag{
+			list-style: none;
+		}
+		.product_detail form{
+			width: 250px;
+			border: 1px solid #777;
+			border-radius: 10px;
+			text-align: center;
+		}
+		.product_detail form .pincode_code{
+			padding: 10px 0;
+			border: none;
+			outline: none;
+			background: transparent;
+			color: #000;
+		}
+		.product_detail .p_delivery
+		{
+			display: flex;
+		}
+		.product_detail .delivery, .product_detail .delivery2{
+			width: 250px;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		.product_detail form .pincode_button{
+			padding: 10px 0;
+			outline: none;
+			border: none;
+			background: transparent;
+			color: red;
+			font-weight: 600;
+		}
+		.product_detail .list_icon
+		{
+			display: flex;
+		}
+		.product_detail .list_icon i
+		{
+			color: green;
+			margin: 5px 10px 0 0;
+		}
+		@media only screen and (max-width: 1220px)
+		{
+			.product_detail .p_delivery
+			{
+				display: inline-block;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+		@media only screen and (max-width: 1050px;)
+		{
+			.product_page
+			{
+				width: 90%;
+				height: auto;
+				margin: 0 5%;
+				
+			}
+			#exzoom1
+			{
+				position: absolute;
+				width: 100%;
+				margin: 20px;
+				align-items: center;
+			}
+			.product_detail
+			{
+				/*float: left;*/
+			}
+		}
+	</style>
+</head>
+<body>
+	<section class="product_page">
+		<div class="exzoom" id="exzoom1">
+			<!-- Images -->
+			<div class="exzoom_img_box">
+				<ul class='exzoom_img_ul'>
+					<li><img src="t-shrt1.jpeg"/></li>
+					<li><img src="t-shrt2.jpeg"/></li>
+					<li><img src="t-shrt3.jpeg"/></li>
+					<li><img src="t-shrt2.jpeg"/></li>
+					<li><img src="t-shrt1.jpeg"/></li>
+					<li><img src="t-shrt2.jpeg"/></li>
+					<li><img src="t-shrt3.jpeg"/></li>
+				</ul>
+			</div>
+			<div class="exzoom_nav"></div>
+			<!-- Nav Buttons -->
+			<p class="exzoom_btn">
+				<a href="javascript:void(0);" class="exzoom_prev_btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+				<a href="javascript:void(0);" class="exzoom_next_btn"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+			</p>
+			<div class="btns-boxs">
+				<button><i class="fa fa-shopping-cart" aria-hidden="true"> ADD TO BAG</i></button><button><i class="fa fa-shopping-bag" aria-hidden="true"> Buy Now</i></button>
+			</div>
+		</div>	
+		<div class="product_detail">
+			<p class="newarrival text-center">NEW</p>
+			<h2 class="product_tittle">Printed Men Hooded Neck Blue T-Shirt</h2>
+			<!-- <p class="product_id">Product Code: ISRC2018</p> -->
+			<div class="product_rating">				
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<i class="fa fa-star-o" aria-hidden="true"></i>
+			</div>
+			<div class="price">
+				<h2>Rs. 749</h2>
+				<span class="main_price"><del>Rs. 1499</del> </span>
+				<span class="discont">50% off</span>
+			</div>
+			<p class="taxes">inclusive of all taxes</p>
+			<div class="offers_tc">
+				<b>Available offers:</b>
+				<ul>
+					<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Partner OfferBuy select fashion worth ₹1000 & more, get upto Extra 150 off* during Big Billion Days Sale’2020 <a>Know More</a></li></div>
+					<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Bank Offer10% Instant Discount on SBI Credit Cards <a>T&C</a></li></div>
+					<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Bank Offer5% Unlimited Cashback on Flipkart Axis Bank Credit Card <a>T&C</a></li></div>
+					<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Bank OfferFlat ₹30 discount on first prepaid transaction using RuPay debit card, minimum order value ₹750/ <a>T&C</a></li></div>
+				</ul>
+			</div>
+			<div class="p_delivery">
+				<div class="delivery">
+					<h4><span><i class="fa fa-truck" aria-hidden="true"></i></span> Delivery Options</h4>
+					<form autocomplete="off">
+						<input type="text" class="pincode_code" maxlength="6" placeholder="Enter Pincode" name="Pincode" value>
+						<input type="submit" class="pincode_button" name="Pincode" value="Check">
+					</form>
+					<p class="pincode_tag mt-2">Please enter PIN code to check delivery time & Pay on Delivery Availability</p>
+				</div>
+				<div class="delivery2">				
+					<ul class="list_tag">
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>100% Original Products</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Free Delivery on order above Rs. 799</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Pay on delivery might be available</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Easy 30 days returns and exchanges</li></div>
+						<div class="list_icon"><i class="fa fa-tag" aria-hidden="true"></i><li>Try & Buy might be available</li></div>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<div class="table-responsive">
+					<table class="table">
+						<thead><h5>Product Details</h5></thead>
+						<tbody>
+							<tr>
+								<th>Type</th><td>Hooded Neck</td>
+							</tr>
+							<tr>
+								<th>Sleeve</th><td>Full Sleeve</td>
+							</tr>
+							<tr>
+								<th>Fit</th><td>Slim</td>
+							</tr>
+							<tr>
+								<th>Fabric</th><td>Cotton Blend</td>
+							</tr>
+							<tr>
+								<th>Pack of</th><td>1</td>
+							</tr>
+							<tr>
+								<th>Style Code</th><td>M7SS20HO006B</td>
+							</tr>
+							<tr>
+								<th>Neck Type</th><td>Hooded Neck</td>
+							</tr>
+							<tr>
+								<th>Ideal For</th><td>Men</td>
+							</tr>
+							<tr>
+								<th>Size</th><td>S</td>
+							</tr>
+							<tr>
+								<th>Pattern</th><td>Printed</td>
+							</tr>
+							<tr>
+								<th>Suitable For</th><td>Western Wear</td>
+							</tr>
+							<tr>
+								<th>Brand Fit</th><td>Slim Fit</td>
+							</tr>
+							<tr>
+								<th>Brand Color</th><td>Blue</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>				
+			</div>
+			<div class="mt-4">
+				<h5>PRODUCT DETAILS </h5>
+				<p class=".font-weight-light">Maroon and Black striped T-shirt, has a round neck, and short sleeves</p>
+				<h5>Size & Fit</h5>
+				<p class="font-weight-light">The model (height 6') is wearing a size M</p>
+			</div>
+			<div class="mt-4">
+				<h5>Complete The Look</h5>
+				<p class="font-weight-light">Made of cotton, you'll love the high-quality fit and feel of this Roadster tee. This maroon piece can be teamed with cuffed chinos and canvas shoes when you're meeting the guys for drinks.</p>
+			</div>
+			<hr>
+			<div>
+				<p>Product Code: <b>10940948</b></p>
+				<p>Sold by: <b>Vkreate eCommerce</b> </p>
+				<p><b>Manufacturer/Packer/Importer Details</b></p>
+				<p>MAITRI KNITWEAR,Behind hp gas agencies,Vill-bajra,rahon road ludhiana-PUNJAB,LUDHIANA-141008</p>
+				<p><b>Country of origin</b></p>
+				<p>India</p>
+			</div>
+		</div>	
+	</section>
+	<hr>
+	<div>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+		<p>India</p>
+	</div>
+	<script  src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="jquery.exzoom.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#exzoom1").exzoom({
+				"autoPlay":false,
+			});			
+		});
+	</script>
+</body>
+</html>
+
+
+
+

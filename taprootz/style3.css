@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+ 		body{
+ 			font-family: 'Scada', sans-serif;
+ 		}
+ 		.second_body
+ 		{
+ 			background-color: #18bebc;
+ 		}
+
+ 		/*side bar*/
+ 		.sidebar_tap
+ 		{
+ 			margin: 30px 40px 0 0;
+ 		}
+ 		.sidebar_tap span
+ 		{
+ 			width: 200px;
+ 			background-color: #eee;
+ 			list-style: none;
+ 			display: flex;
+ 			padding: 8px;
+ 			margin: 1px 0;
+ 			font-size: 13px;
+ 			font-weight: 500;
+ 		}
+ 		.sidebar_tap .active,  .sidebar_tap span:hover
+ 		{
+ 			background-color: #18bebc;
+ 			border-left: 2px solid #eee;
+ 			border-right: 2px solid #eee;
+ 		}
+ 		/*side bar end*/
+
+
+ 		/*second_body*/
+ 		h3.main {
+ 			position: relative;
+ 			font-size: 40px;
+ 			font-weight: 700;
+ 			top: 20px;
+ 			left: 10px;
+ 		}
+ 		h3.main_shadow {
+ 			position: relative;
+ 			top: -5rem;
+ 			left: 10px; 			
+ 			color: transparent;
+ 			font-size: 45px;
+ 			text-shadow: 8px -4px 2px rgba(0, 0, 0, 0.1);
+ 		}
+ 		.second_para p
+ 		{
+ 			font-size: 12px;
+ 			margin-top: -30px;
+
+ 		}
+ 		.btm4_box
+ 		{
+ 			display: flex;
+ 			justify-content: space-between;
+ 			flex-wrap: wrap;
+ 		}
+
+
+ 		/*----used this---*/
+ 		.btn
+ 		{
+ 			width: 200px;
+ 			margin: 20px 0;
+ 			border: none;
+ 			outline: none;
+ 			background-color: #fff;
+ 		}
+ 		.btn:hover, .btn.active
+ 		{
+ 			background-color: #18bebc;
+ 			border: 2px solid #fff;
+ 		}
+ 		.Filter
+ 		{
+ 			font-size: 10px;
+ 			display: flex;
+ 			justify-content: flex-end;
+ 		}
+ 		.table
+ 		{
+ 			width: 80%;
+ 		}
+ 		.table-striped>tbody>tr:nth-of-type(odd) {
+ 			background-color: #39d2cf !important;
+ 		}
+ 		.table-striped>tbody>tr:nth-of-type(even) {
+ 			background-color: #18bebc !important;
+ 		}
+ 		.table td, .table th
+ 		{
+ 			border: none !important;
+ 		}
+ 		.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td
+ 		{
+ 			line-height: 13px;
+ 			font-size: 13px;
+ 			padding: 3px 0 0 0;
+ 		}
+ 		.table>thead>tr>th 
+ 		{
+ 			line-height: 12px;
+ 			font-size: 12px;
+ 			padding: 5px 0;
+ 		}
+ 		input[type=checkbox]
+ 		{
+ 			line-height: 8px;
+ 			margin: 0;;
+ 			padding-left: 100px;
+ 		}
+ 		/*----used this---*/
+
+
+ 		/*second_body end*/
+
+
+ 		@media only screen and (max-width: 1290px) {
+
+ 			.tables>tbody>tr>td
+ 			{
+ 				line-height: 11px;
+ 				font-size: 11px;
+ 				padding: 7px 10px;
+ 			}
+ 			.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td
+ 			{
+ 				line-height: 10px;
+ 				font-size: 10px;
+ 				padding: 3px 0 0 0;
+ 			}
+ 			.table>thead>tr>th 
+ 			{
+ 				line-height: 12px;
+ 				font-size: 12px;
+ 				padding: 5px 0;
+ 			}
+ 			
+ 			.sidebar_tap span
+ 			{
+ 				width: 140px;
+ 				list-style: none;
+ 				display: flex;
+ 				padding: 5px;
+ 				margin: 1px 0;
+ 				font-size: 10px;
+ 				font-weight: 500;
+ 			}
+ 			h3.main_shadow {
+ 				display: none;
+ 			}
+ 			.second_para p
+ 			{
+ 				margin-top: 30px;
+ 			}
+ 		}
+
+ 		.popup_form
+ 		{
+ 			width: 650px;
+ 			height: 550px;
+ 			position: absolute;
+ 			top: 50%;
+ 			left: 50%;
+ 			transform: translate(-50%, -50%);
+ 			padding: 8rem  16rem;
+ 			box-shadow: 3px 3px 10px #000;
+ 		}
+ 		.popbtn
+ 		{
+ 			border: none;
+ 			width: 100%;
+ 			background-color: #18bebc;
+ 			padding: 10px;
+ 			border-radius: 5px;
+
+ 		}
+ 		.close:not(:disabled):not(.disabled) {
+ 			font-size: 45px;
+ 			color: #000;
+ 			margin: -8rem -14rem 0 0;
+ 		}
