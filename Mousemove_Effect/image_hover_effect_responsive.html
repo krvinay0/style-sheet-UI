@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hover_effect</title>
+	<style>
+		*
+		{
+			/*background-color: #262626;*/
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'poppins', sans-serif;
+		}
+		body
+		{
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			min-height: 100vh;
+		}
+		.container
+		{
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: 100%;
+			transform-style: preserve-3d;
+		}
+		.container .box
+		{
+			position: relative;
+			width: 300px;
+			height: 400px;
+			margin: 20px 0px;
+			perspective: 1000px;
+			overflow: hidden;
+			transform-style: preserve-3d;
+		}
+		.container .box .imgbx
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			transform-origin: top;
+			transform-style: preserve-3d;
+			transition: 0.5s;
+			transition-delay: .2s;
+		}
+		.container .box:hover .imgbx
+		{
+			transform: rotateX(-90deg);
+			opacity: 0;
+			transition-delay: .2s;
+		}
+		.container .box .imgbx img
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 300px;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		.container .box .contentbox
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #333;
+			display: flex;
+			justify-content: center;
+			padding: 40px;
+			transform-origin: bottom;
+			transform-style: preserve-3d;
+			transition: 0.5s;
+			transform: rotateX(90deg);
+			opacity: 0;
+		}
+		.container .box:hover .contentbox
+		{
+			transform: rotateX(0deg);
+			opacity: 1;
+			color: #fff;
+			transition-delay: .2s;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="imgbx">
+				<img src="image.jpg">
+			</div>
+			<div class="contentbox">
+				<div>
+					<h1>Image Hover Effect</h1>	
+					<p>Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee</p>
+				</div>	
+			</div>	
+		</div>
+		<div class="box">
+			<div class="imgbx">
+				<img src="image.jpg">
+			</div>
+			<div class="contentbox">
+				<div>
+					<h1>Image Hover Effect</h1>	
+					<p>Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee</p>
+				</div>	
+			</div>	
+		</div>
+		<div class="box">
+			<div class="imgbx">
+				<img src="image.jpg">
+			</div>
+			<div class="contentbox">
+				<div>
+					<h1>Image Hover Effect</h1>	
+					<p>Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee</p>
+				</div>	
+			</div>	
+		</div>
+	</div>
+	
+</body>
+</html>

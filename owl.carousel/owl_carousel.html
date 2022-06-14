@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>owl carousel</title>
+    <link rel="stylesheet" type="text/css" href="owl.carousel.css" />
+    <style>
+      .owl-carousel {
+        /* background-color: #ddd; */
+        display: flex;
+		margin: 0;
+        height: 389px;
+        padding: 0;
+      }
+      .item {
+        /* background-color: blue; */
+        height: 389px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .item img {
+        height: 100%;
+        width: 100%;
+      }
+
+      .owl-carousel .owl-nav button.owl-prev {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: orange;
+      }
+      .owl-carousel .owl-nav button.owl-next {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="owl-carousel owl-theme">
+      <div class="item"><img src="image/bg1.jpg" /></div>
+      <div class="item"><img src="image/bg2.jpg" /></div>
+      <div class="item"><img src="image/bg3.jpg" /></div>
+      <div class="item"><img src="image/bg4.jpg" /></div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="owl.carousel.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        //   	responsive : {
+        //     // breakpoint from 0 up
+        //     0 : {
+        //        items:1
+        //     },
+        //     // breakpoint from 480 up
+        //     480 : {
+        //        items:2
+        //     },
+        //     // breakpoint from 768 up
+        //     768 : {
+        //         items:3
+        //     },
+        //      992 : {
+        //         items:4
+        //     }
+        // }
+      });
+    </script>
+  </body>
+</html>

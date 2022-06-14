@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hover_effect</title>
+	<style>
+		body
+		{
+			background-color: #262626;
+			margin: 0;
+			padding: 0;
+		}
+		.container
+		{
+			width: 400px;
+			height: 250px;
+			background: #000;
+			overflow: hidden;
+			font-family: arial;
+			color: #fff;
+			margin: 200px auto;
+			perspective: 50em;
+			box-sizing: border-box;
+			transition: 5s ease;
+			position: relative;
+			border: 1px solid rgba(255,255,255,.2);
+		}
+		.container img
+		{
+			width: 100%;
+			transition: .5s;
+			transform-origin: 0 100%;
+		}
+		.textbox
+		{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;c;
+			z-index: 1;
+			opacity: 0;
+			background: #f00;
+			padding: 20px 30px;
+			transform: rotateX(-90deg);
+			transform-origin: 50% 0%;
+			transition: .5s;
+		}
+		.textbox h1, .textbox p
+		{
+			line-height: 1.3em;
+		}		
+		.container:hover img
+		{
+			transform: rotateX(90deg);
+			opacity: 0;
+		}
+
+		.container:hover .textbox
+		{
+			opacity: 1;
+			transform: rotateX(0deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="image.jpg">
+		<div class="textbox">
+			<h1>Image Hover Effect</h1>	
+			<p>Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee Free modifications, free on-board meals, best rate guarantee for a wide range of hotels and GST Invoice Guarantee</p>		
+		</div>
+	</div>
+
+</body>
+</html>
